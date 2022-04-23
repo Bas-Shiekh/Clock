@@ -8,3 +8,107 @@
   color: white;
   font-family: 'Nanum Gothic', sans-serif;
 }
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+main h1 {
+  margin-left: 4rem;
+}
+
+.circle-cont {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.circle-cont h2 {
+  font-size: 2rem;
+}
+
+.circle-cont:nth-child(2) {
+  margin: 0 5rem;
+}
+
+.circle-cont div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circle-cont div h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+.circle-cont div h3 {
+  font-size: 0.8rem;
+}
+
+.circle-cont svg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transform: rotate(270deg);
+}
+
+.circle-cont svg circle {
+  fill: transparent;
+  stroke-width: 5px;
+  transform: translate(5px, 5px);
+  position: relative;
+  stroke: var(--color);
+}
+
+.circle-cont svg circle:nth-child(1) {
+  stroke: #111;
+}
+
+.circle-cont svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.dots::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color);
+  z-index: 1000;
+  border-radius: 50%;
+  top: -5px;
+  box-shadow: 0 0 15px 0 var(--color),
+  0 0 20px 0 var(--color);
+}
